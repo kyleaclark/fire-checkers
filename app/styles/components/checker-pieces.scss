@@ -1,0 +1,40 @@
+@import "../_global.scss";
+
+/* --- [ Checker Pieces ] --- */
+
+.piece-container {
+  background-color: transparent;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+.piece {
+  border: 2px solid;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.85);
+  border-radius: 50%;
+  height: 40px;
+  margin: 5px 0 0 5px;
+  width: 40px;
+  z-index: 1000;
+}
+
+.black-piece {
+  background-color: #3a3a3a;
+  border-color: rgb(99, 99, 99);
+  border-color: rgba(99, 99, 99, 0.85);
+  box-shadow: inset 3px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.red-piece {
+  background-color: #7d0000;
+  border-color: rgb(150, 33, 33);
+  border-color: rgba(150, 33, 33, 0.85);
+  box-shadow: inset 2px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.selected-piece {
+  border-color: rgb(57, 255, 20);
+  border-color: rgba(57, 255, 20, 0.85);
+  box-shadow: 1px 1px 1px 0px rgba(57, 255, 20, 0.5);
+}

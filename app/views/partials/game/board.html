@@ -1,0 +1,35 @@
+
+  <!-- BOARD -->
+  <div ng-show="game.showBoard">
+
+    <h3 style="text-align: center">{{game.player.turn}}'s turn</h3>
+
+    <div class="checker-board"
+         ng-class="{'animated fadeIn': true}">
+
+      <!-- BOARD TILE -->
+      <div class="checker pull-left board-tile"
+           ng-repeat="(key, tile) in game.board.tiles"
+           ng-class="{'black': tile.isBlack,
+                      'tile-drag-over': tile.dragOver,
+                      'tile-drag-over-valid': tile.dragOver === 'valid',
+                      'tile-drag-over-invalid': tile.dragOver === 'invalid'}"
+           board-tile>
+
+        <div ng-if="tile.piece.player"
+             class="piece-container">
+
+          <div class="piece"
+               ng-class="{'black-piece': tile.piece.player == 'black',
+                          'red-piece': tile.piece.player == 'red'}"
+               draggable="true"
+               board-piece>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>

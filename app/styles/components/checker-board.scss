@@ -1,0 +1,40 @@
+@import "../_global.scss";
+
+/* --- [ Checker Board ] --- */
+
+.checker-board {
+  height: 420px;
+  width: 420px;
+  margin: auto auto;
+  border: 10px solid #444;
+}
+
+.board-tile {
+  height: 50px;
+  width: 50px;
+  background-color: #F0C420;
+}
+
+.black{
+  background-color: #B22222;
+}
+
+.white{
+  background-color: #FFF;
+}
+
+.tile-drag-over {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: 
+  border-box; box-sizing: border-box;
+  border: 3px dashed;
+}
+
+.tile-drag-over-valid {
+  border-color: rgb(70, 184, 218);
+}
+
+.tile-drag-over-invalid {
+  border-color: rgb(14, 14, 14);
+  border-color: rgba(14, 14, 14, .75);
+}
