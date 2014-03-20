@@ -11,6 +11,28 @@ March 2014
 
 Multiplayer Checkers (SPA) built on AngularJS + Firebase.
 
+##Technologies
+
+JavaScript
+
+NodeJS
+
+AngularJS
+
+Yeoman
+
+Grunt
+
+Bower
+
+jQuery
+
+HTML5
+
+CSS3
+
+Sass
+
 ##Setup
 
 Install Node dependencies [compatible version >= 0.10.0 < 0.11.0] - refer to nodejs.org.
