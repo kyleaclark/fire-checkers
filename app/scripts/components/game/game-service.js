@@ -11,7 +11,8 @@ angular.module('Checkers.game.service', [
       this.game = game;
       this.initGameBoard();
       this.initGamePlayer();
-    }
+      return this.game;
+    };
 
     this.initGameBoard = function () {
       if (typeof this.game.board === "undefined") {
@@ -34,8 +35,21 @@ angular.module('Checkers.game.service', [
       PlayerService.initPlayerTurn();
     };
 
-    this.whatisPlayerTurn = function () {
-      console.log('player turn : ', this.game);
+    this.updatePlayerTurn = function () {
+      PlayerService.toggleTurn();
+      this.game.player = PlayerService.getPlayer();
+    };
+
+    this.getGame = function () {
+      return this.game;
+    };
+
+    this.getPlayer = function () {
+      return this.game.player;
+    };
+
+    this.setGameBoard = function () {
+      this.game.board = BoardService.getBoard();
     };
 
   });

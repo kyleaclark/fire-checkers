@@ -5,50 +5,44 @@ angular.module('Checkers.game.controller', [
     'Checkers.player.service'
   ])
 
-  .controller('GameController', function ($scope, GameService) {
+  .controller('GameController', function ($scope, GameService, PlayerService) {
+
+    var self = $scope;
 
     $scope.init = function () {
-      this.playNewSoloGameBtn = true;
-      this.joinMultiPlayerGameBtn = true;
+      self.game = {};
+      self.playNewSoloGameBtn = true;
+      self.joinMultiPlayerGameBtn = true;
     };
 
     $scope.playNewSoloGame = function () {
-      this.initGame();
-      this.addSoloFirebaseGame();
-      this.hideGameBtns();
+      self.initGame();
+      self.addSoloFirebaseGame();
+      self.hideGameBtns();
     };
 
     $scope.joinMultiPlayerGame = function () {
-      this.joinFirebaseGame();
-      this.initGame();
-      this.hideGameBtns();
+      self.joinFirebaseGame();
+      self.initGame();
+      self.hideGameBtns();
     };
 
     $scope.initGame = function () {
-      GameService.init(this.game);
+      self.game = GameService.init(self.game);
     };
 
     /**
     * Hide game buttons after a new game is started until app set up to handle consecutive new games
     */
     $scope.hideGameBtns = function () {
-      this.playNewSoloGameBtn = false;
-      this.joinMultiPlayerGameBtn = false;
+      self.playNewSoloGameBtn = false;
+      self.joinMultiPlayerGameBtn = false;
     };
 
-    $scope.$watch(
-      "game.board",
-      function (newValue, oldValue) {
-        console.log('board : ', newValue);
-      }
-    );
-
-    $scope.$watch(
-      "game.player",
-      function (newValue, oldValue) {
-        console.log('player : ', newValue);
-      }
-    );
+    $scope.$on('digestIt', function (ev) {
+      self.game.player = GameService.getPlayer();
+      //$scope.$apply();
+    });
 
     $scope.init();
   });

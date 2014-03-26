@@ -18,11 +18,15 @@ body {
   width: 100%;
 }
 
-header {
+header, footer {
   text-align: center;
 }
 
+footer {
+  border-top: 1px solid #ccc;
+}
+
 .play-container {
-  margin-top: 75px;
+  margin-top: 50px;
   text-align: center;
 }

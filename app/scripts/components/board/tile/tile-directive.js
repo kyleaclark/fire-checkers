@@ -4,7 +4,7 @@ angular.module('Checkers.board.tile.directive', [
     'Checkers.board.tile.service'
   ])
 
-  .directive('boardTile', function (BoardTileService) {
+  .directive('boardTile', function (BoardTileService, BoardService, PlayerService) {
 
     return function (scope, element) {
       element.bind('dragover', function (ev) {
@@ -29,9 +29,12 @@ angular.module('Checkers.board.tile.directive', [
 
       element.bind('drop', function (ev) {
         ev.preventDefault();
-        scope.$apply(function () {
-          BoardTileService.onTileDrop(scope.tile);
-        });
+
+        BoardTileService.onTileDrop(scope.tile)
+        scope.$digest();
+
+        scope.game.player.turn = PlayerService.player.turn;
+        scope.$apply();
       });
     }
 

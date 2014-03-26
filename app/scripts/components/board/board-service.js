@@ -16,6 +16,10 @@ angular.module('Checkers.board.service', [
       this.generateTilePieces();
     };
 
+    this.getBoard = function () {
+      return this.board;
+    };
+
     this.generateTiles = function () {
       var 
         isBlack = true,
@@ -94,6 +98,10 @@ angular.module('Checkers.board.service', [
         // Decrement index of tiles
         tileIndex--;
       }
+    };
+
+    this.updateBoardTilePiece = function (index, piece) {
+      this.board.tiles[index].piece = piece;
     };
 
   });

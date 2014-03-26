@@ -8,7 +8,6 @@ angular.module('Checkers.controller', [
 
   	$scope.init = function () {
   	  this.initFirebase();
-      this.game = {};
   	}
 
   	$scope.initFirebase = function () {
@@ -58,7 +57,7 @@ angular.module('Checkers.controller', [
     };
 
     $scope.bindFirebaseGame = function () {
-      this.firebaseGame.$bind($scope, 'game');
+      this.firebaseGame.$bind(this, 'game');
     };
 
     $scope.init();
