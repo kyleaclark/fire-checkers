@@ -9,7 +9,7 @@ March 2014
 
 ##Overview
 
-Multiplayer Checkers (SPA) built on AngularJS + Firebase.
+Multiplayer Checkers game built on AngularJS + Firebase.
 
 ##Technologies
 
@@ -24,8 +24,6 @@ Yeoman
 Grunt
 
 Bower
-
-jQuery
 
 HTML5
 

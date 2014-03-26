@@ -16,6 +16,10 @@ angular.module('Checkers.player.service', [
       this.setPlayerTurn();
     };
 
+    this.getPlayer = function () {
+      return this.player;
+    };
+
     this.getPlayerTurn = function () {
       return this.player.turn;
     };
@@ -27,8 +31,6 @@ angular.module('Checkers.player.service', [
     this.toggleTurn = function () {
       PlayerTurnService.toggle();
       this.setPlayerTurn();
-
-      console.log(this);
     };
 
     this.isMoveValid = function (fromTile, toTile) {

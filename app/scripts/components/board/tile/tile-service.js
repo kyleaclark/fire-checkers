@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('Checkers.board.tile.service', [
-    'Checkers.player.service'
+    'Checkers.player.service',
+    'Checkers.board.service',
+    'Checkers.game.service'
   ])
 
-  .service('BoardTileService', function (PlayerService, GameService) {
+  .service('BoardTileService', function (PlayerService, BoardService, GameService) {
 
     this.onTilePieceDragStart = function (tile) {
       this.fromTile = tile;
@@ -23,22 +25,29 @@ angular.module('Checkers.board.tile.service', [
     };
 
     this.onTileDrop = function (toTile) {
+      this.toTile.dragOver = false;
+
       if (this.validTile) {
         this.updatePieceMove();
         this.updatePlayerTurn();
+        return true;
       }
 
-      this.toTile.dragOver = false;
+      return false;
     };
 
     this.updatePieceMove = function () {
       this.toTile.piece = this.fromTile.piece;
       this.fromTile.piece = {};
+      this.fromTile.piece.player = '';
+
+      BoardService.updateBoardTilePiece(this.fromTile.tileIndex, this.fromTile.piece);
+      BoardService.updateBoardTilePiece(this.toTile.tileIndex, this.toTile.piece);
     };
 
     this.updatePlayerTurn = function () {
-      PlayerService.toggleTurn();
-      GameService.whatisPlayerTurn();
+      //PlayerService.toggleTurn();
+      GameService.updatePlayerTurn();
     };
 
     this.updateTilePieceSelect = function (newTile, currentTile) {
@@ -51,6 +60,7 @@ angular.module('Checkers.board.tile.service', [
     this.updateTilePieceMove = function (newTile, currentTile) {
       newTile.piece = currentTile.piece;
       currentTile.piece = {};
+      currentTile.piece.player = '';
       newTile.piece.isSelected = false;
     };
 
