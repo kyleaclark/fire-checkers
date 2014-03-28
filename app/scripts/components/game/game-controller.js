@@ -5,7 +5,7 @@ angular.module('Checkers.game.controller', [
     'Checkers.player.service'
   ])
 
-  .controller('GameController', function ($scope, GameService, PlayerService) {
+  .controller('GameController', function ($scope, GameService) {
 
     var self = $scope;
 
@@ -39,7 +39,7 @@ angular.module('Checkers.game.controller', [
       self.joinMultiPlayerGameBtn = false;
     };
 
-    $scope.$on('digestIt', function (ev) {
+    $scope.$on('digestIt', function () {
       self.game.player = GameService.getPlayer();
       //$scope.$apply();
     });

@@ -12,7 +12,7 @@ angular.module('Checkers.player.service', [
     };
 
     this.initPlayerTurn = function () {
-      PlayerTurnService.init();
+      PlayerTurnService.init(this.player);
       this.setPlayerTurn();
     };
 
