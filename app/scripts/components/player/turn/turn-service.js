@@ -7,7 +7,8 @@ angular.module('Checkers.player.turn.service', [])
     /**
     * Initialize instance
     */
-    this.init = function () {
+    this.init = function (player) {
+      this.player = player;
       this.initVars();
       this.setPlayerTurn(this.FIRST_TURN);
     };
@@ -18,7 +19,7 @@ angular.module('Checkers.player.turn.service', [])
     this.initVars = function () {
       this.BLACK = 'black';
       this.RED = 'red';
-      this.FIRST_TURN = this.BLACK;
+      this.FIRST_TURN = this.player.turn ? this.player.turn : this.BLACK;
     };
 
     /**
