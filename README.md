@@ -1,7 +1,7 @@
 fire-checkers
 ============
 
-##Overview
+##Description
 
 Multiplayer Checkers game built on AngularJS + Firebase.
 
@@ -11,9 +11,9 @@ March 2014 (last update: March 2014)
 
 ##Screenshot Example
 
-![alt text](https://raw.github.com/kyleaclark/fire-checkers/master/screenshot.png "Screenshot Image")
+*Taken on March 29, 2014*
 
-*Saved 03-29-2014*
+![alt text](https://raw.github.com/kyleaclark/fire-checkers/master/screenshot.png "Screenshot Image")
 
 ##Technologies
 
