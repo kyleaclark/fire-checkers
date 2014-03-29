@@ -7,7 +7,7 @@ Multiplayer Checkers game built on AngularJS + Firebase.
 
 ##Authored Date
 
-March 2014 (last update: March 2014)
+March 2014 (*last update*: March 2014)
 
 ##Screenshot Example
 
