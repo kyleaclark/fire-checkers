@@ -71,6 +71,6 @@ Sass
 
 ##Screenshot Example
 
-03-29-2014
+Last taken 03-29-2014:
 
 ![alt text](https://raw.github.com/kyleaclark/fire-checkers/master/screenshot.png "Screenshot Image")
