@@ -18,7 +18,6 @@ March 2014 (*last update*: March 2014)
 ##Technologies
 
 * JavaScript
-
 * NodeJS
 
 * AngularJS
