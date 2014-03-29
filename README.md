@@ -1,21 +1,24 @@
-fire-checkers
-============
+#fire-checkers
 
-##Description
+---
+
+###Project Overview
+
+####Description
 
 Multiplayer Checkers game built on AngularJS + Firebase.
 
-##Authored Date
+####Authored Date
 
 March 2014 (*last update*: March 2014)
 
-##Screenshot Example
+####Screenshot Example
 
 *Taken on March 29, 2014*
 
 ![alt text](https://raw.github.com/kyleaclark/fire-checkers/master/screenshot.png "Screenshot Image")
 
-##Technologies
+####Technologies
 
 * JavaScript
 * NodeJS
@@ -27,9 +30,20 @@ March 2014 (*last update*: March 2014)
 * CSS3
 * Sass
 
-#Development Overview
+####Browser Support
 
-##Setup
+| Desktop
+|:-------------
+| Internet Explorer 9+
+| Chrome*
+| Firefox*
+| Safari*
+
+_*Latest Version_
+
+###Development Overview
+
+####Setup
 
 Install Node dependencies [compatible version >= 0.10.0 < 0.11.0] - refer to nodejs.org.
 
@@ -39,7 +53,7 @@ Install Bower dependencies [npm install -g bower, Git via http://git-scm.com] - 
 
 Install Compass dependencies (Ruby, Compass, & Sass) [gem update --system && gem install compass] - refer to https://github.com/gruntjs/grunt-contrib-compass.
 
-##Build
+####Build
 
 Clone repo to local.
 
@@ -61,7 +75,7 @@ Run "grunt setup" to install project dependencies from bower.json.
 grunt setup
 ```
 
-##Run
+####Run
 
 Run "grunt serve" command from root to run application locally
 
