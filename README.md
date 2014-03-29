@@ -11,9 +11,9 @@ March 2014 (last update: March 2014)
 
 ##Screenshot Example
 
-*Saved 03-29-2014*
-
 ![alt text](https://raw.github.com/kyleaclark/fire-checkers/master/screenshot.png "Screenshot Image")
+
+*Saved 03-29-2014*
 
 ##Technologies
 
