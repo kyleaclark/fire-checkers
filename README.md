@@ -1,17 +1,15 @@
 fire-checkers
 ============
 
-#Project Overview
+##Overview
+
+Multiplayer Checkers game built on AngularJS + Firebase.
 
 ##Authored Date
 
 March 2014
 
 (last edit: March 2014)
-
-##Description
-
-Multiplayer Checkers game built on AngularJS + Firebase.
 
 ##Screenshot Example
 
