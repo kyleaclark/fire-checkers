@@ -1,15 +1,45 @@
 fire-checkers
 ============
 
+#Project Overview
+
 ##Authored Date
 
 March 2014
 
 (last edit: March 2014)
 
-##Overview
+##Description
 
 Multiplayer Checkers game built on AngularJS + Firebase.
+
+##Screenshot Example
+
+Last taken 03-29-2014:
+
+![alt text](https://raw.github.com/kyleaclark/fire-checkers/master/screenshot.png "Screenshot Image")
+
+##Technologies
+
+JavaScript
+
+NodeJS
+
+AngularJS
+
+Yeoman
+
+Grunt
+
+Bower
+
+HTML5
+
+CSS3
+
+Sass
+
+#Development Overview
 
 ##Setup
 
@@ -48,29 +78,3 @@ grunt setup
 Run "grunt serve" command from root to run application locally
 
 Run "grunt build" command from root to compile js, css, & html into disbrution-ready, minified code
-
-##Technologies
-
-JavaScript
-
-NodeJS
-
-AngularJS
-
-Yeoman
-
-Grunt
-
-Bower
-
-HTML5
-
-CSS3
-
-Sass
-
-##Screenshot Example
-
-Last taken 03-29-2014:
-
-![alt text](https://raw.github.com/kyleaclark/fire-checkers/master/screenshot.png "Screenshot Image")
