@@ -19,19 +19,12 @@ March 2014 (*last update*: March 2014)
 
 * JavaScript
 * NodeJS
-
 * AngularJS
-
 * Yeoman
-
 * Grunt
-
 * Bower
-
 * HTML5
-
 * CSS3
-
 * Sass
 
 #Development Overview
